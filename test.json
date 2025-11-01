@@ -1,0 +1,15 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "total":10,
+    "list": [
+      {
+        "id": 0,
+        "productKey": "string",
+        "productDesc": "string",
+        "deleted": false
+      }
+    ]
+  }
+}

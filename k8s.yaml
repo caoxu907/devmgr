@@ -1,0 +1,70 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devmgr
+  namespace: platform
+  labels:
+    app: devmgr
+spec:
+  type: ClusterIP
+  ports:
+  - port: 2000
+    name: service
+    targetPort: 2000
+  selector:
+    app: devmgr
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devmgr
+  namespace: platform
+  labels:
+    app: devmgr
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devmgr
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: devmgr
+        version: v1
+
+    spec:
+#      hostAliases:
+#        - ip: "10.17.196.182"
+#          hostnames:
+#            - "kafka-node1.cluster.local"
+#        - ip: "10.17.196.183"
+#          hostnames:
+#            - "kafka-node2.cluster.local"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - devmgr
+              topologyKey: kubernetes.io/hostname
+      containers:
+      - name: devmgr
+        image: devmgr:${IMAGE_VERSION}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 2000
+          name: service
+          protocol: TCP
+        envFrom:
+        - configMapRef:
+            name: global-config
+
+

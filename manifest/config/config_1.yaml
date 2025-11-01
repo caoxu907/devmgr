@@ -1,0 +1,79 @@
+# https://goframe.org/docs/web/server-config-file-template
+
+network: "${SUBNET:10.2.0.0/16}"
+
+grpc:
+  address: ""
+  name: "${APP_NAME:devmgr}"
+  errorStack: true
+  accessLog: false
+  port: "2000"
+
+server:
+  address:     ":80"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+  port: "80"
+
+
+nacosConfig:
+  addresses: "${NACOS_ADDRESS:10.17.196.182:8848,10.17.196.183:8848}"
+  namespaceId: "${NACOS_NAMESPACE:public}"
+  clusterName: "${NACOS_CLUSTER_NAME:DEFAULT}"
+  logDir: "tmp/nacos"
+  cacheDir: "tmp/nacos"
+  dataId: "${APP_NAME:datamgr}"
+  group: "${NACOS_GROUP:DEFAULT_GROUP}"
+  logLevel: "${NACOS_LOG_LEVEL:info}"
+
+nacosRegistry:
+  addresses: "${NACOS_ADDRESS:10.17.196.182:8848,10.17.196.183:8848}"
+  clusterName: "${NACOS_CLUSTER_NAME:DEFAULT}"
+  group: "${NACOS_GROUP:DEFAULT_GROUP}"
+  namespaceId: "${NACOS_NAMESPACE:public}"
+
+
+kafka:
+  brokers: "${KAFKA_NODE:kafka-node2.cluster.local:9092}"
+  groupId: "devmgr_consumer_group"
+
+
+
+database:
+  default:
+    link: "pgsql:${PG_USER:postgres}:${PG_PASSWORD:postgres}@tcp(${PGSQL_DATABASE:10.17.196.182:5432})/devtest"
+
+
+redis:
+  default:
+    address: "${REDIS_ADDR:10.17.196.182:6379}"
+    db:      1
+
+
+influxdb:
+  url: "${INFLUXDB_URL:http://10.17.196.183:8086}"
+  token: "${INFLUXDB_TOKEN:E4gPOxa5OP3RCDo50_be2MHHIaLgjojF_BqqDV2RXptorkTQ8H2xf7EcucnfABuTuMShQpDNM_ThV1nu58F4lw==}"
+  org: "${INFLUXDB_ORG:test}"
+  bucket: "${INFLUXDB_BUCKET:devtest}"
+
+prometheus:
+  path: "/metrics"
+
+
+logger:
+  path: "/var/log/"           # 日志文件路径。默认为空，表示关闭，仅输出到终端
+  file: "{Y-m-d}.log"         # 日志文件格式。默认为"{Y-m-d}.log"
+  prefix: ""                    # 日志内容输出前缀。默认为空
+  level: "info"                 # 日志输出级别
+  timeFormat: "2006-01-02T15:04:05" # 自定义日志输出的时间格式，使用Golang标准的时间格式配置
+  ctxKeys: [ ]                    # 自定义Context上下文变量名称，自动打印Context的变量到日志中。默认为空
+  header: true                  # 是否打印日志的头信息。默认true
+  stdout: true                  # 日志是否同时输出到终端。默认true
+  rotateSize: 0                     # 按照日志文件大小对文件进行滚动切分。默认为0，表示关闭滚动切分特性
+  rotateExpire: 0                     # 按照日志文件时间间隔对文件滚动切分。默认为0，表示关闭滚动切分特性
+  rotateBackupLimit: 0                     # 按照切分的文件数量清理切分文件，当滚动切分特性开启时有效。默认为0，表示不备份，切分则删除
+  rotateBackupExpire: 0                     # 按照切分的文件有效期清理切分文件，当滚动切分特性开启时有效。默认为0，表示不备份，切分则删除
+  rotateBackupCompress: 0                     # 滚动切分文件的压缩比（0-9）。默认为0，表示不压缩
+  rotateCheckInterval: "1h"                  # 滚动切分的时间检测间隔，一般不需要设置。默认为1小时
+  stdoutColorDisabled: false                 # 关闭终端的颜色打印。默认开启
+  writerColorEnable: false                 # 日志文件是否带上颜色。默认false，表示不带颜色

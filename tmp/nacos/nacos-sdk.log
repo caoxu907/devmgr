@@ -1,0 +1,1258 @@
+2025-10-31T12:22:19.290+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T12:22:19.312+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T12:22:19.314+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T12:22:19.315+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T12:22:19.318+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr-http> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":59559,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T12:22:19.319+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":59559,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T12:22:19.415+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T12:22:19.419+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":59559,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T12:22:19.515+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T12:22:19.519+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":59559,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T13:44:21.965+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T13:44:21.965+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T13:44:21.966+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T13:44:21.966+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T13:44:21.971+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr-http> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":53082,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T13:44:21.971+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":53082,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T13:44:22.067+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T13:44:22.071+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":53082,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T13:44:22.169+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T13:44:22.172+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":53082,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:00:56.008+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:00:56.009+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:00:56.010+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:00:56.010+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:00:56.013+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr-http> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":57371,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:00:56.013+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":57371,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:00:56.110+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:00:56.113+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":57371,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:00:56.210+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:00:56.214+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":57371,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:15:44.260+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:15:44.260+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:15:44.261+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:15:44.261+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:15:44.265+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr-http> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":52671,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:15:44.265+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":52671,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:15:44.361+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:15:44.365+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":52671,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:15:44.462+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:15:44.465+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":52671,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:16:00.496+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:16:00.496+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:16:00.497+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:16:00.497+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:16:00.500+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr-http> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":52702,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:16:00.500+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":52702,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:16:00.598+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:16:00.601+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":52702,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:16:00.698+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:16:00.701+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":52702,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:21:39.058+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:21:39.058+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:21:39.059+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:21:39.059+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:21:39.064+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr-http> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":63367,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:21:39.064+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":63367,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:21:39.159+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:21:39.164+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":63367,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:21:39.260+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:21:39.265+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":63367,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:51:18.910+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:51:18.933+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:51:36.366+0800	WARN	config_client/config_client.go:328	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:51:36.366+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\datamgr@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T14:51:36.376+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:51:36.376+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:51:36.385+0800	INFO	naming_grpc/naming_grpc_proxy.go:108	batch register instance namespaceId:<public>,serviceName:<devmgr-http> with instance:<[{"instanceId":"","ip":"192.168.137.57","port":59078,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]>
+2025-10-31T14:51:36.385+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":59078,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=0, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:51:36.477+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:51:36.486+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":59078,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=1, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:51:36.577+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":2000,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"protocol":"grpc"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:182
+github.com/gogf/gf/contrib/rpc/grpcx/v2.(*GrpcServer).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/rpc/grpcx/v2@v2.9.0/grpcx_grpc_server.go:114
+devmgr/internal/cmd.init.func1
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:160
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithSpecificArgs
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:94
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:75
+github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:41
+github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/os/gcmd/gcmd_command_run.go:35
+main.main
+	D:/Seiyuan/project_all/cloud_plat/devmgr/main.go:15
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:283
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T14:51:36.586+0800	ERROR	rpc/rpc_client.go:629	Send request fail, request=BatchInstanceRequest, body={"requestId":"","namespace":"public","serviceName":"devmgr-http","groupName":"DEFAULT_GROUP","module":"naming","type":"batchRegisterInstance","instances":[{"instanceId":"","ip":"192.168.137.57","port":59078,"weight":100,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"","metadata":{"insecure":"true","protocol":"http"},"instanceHeartBeatInterval":0,"ipDeleteTimeout":0,"instanceHeartBeatTimeOut":0}]}, retryTimes=2, error=client not connected, current status:STARTING
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/common/remote/rpc/rpc_client.go:591
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).requestToServer
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:88
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client/naming_grpc.(*NamingGrpcProxy).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_grpc/naming_grpc_proxy.go:112
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingProxyDelegate).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_proxy_delegate.go:90
+github.com/nacos-group/nacos-sdk-go/v2/clients/naming_client.(*NamingClient).BatchRegisterInstance
+	C:/Users/caoxu/go/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.7/clients/naming_client/naming_client.go:145
+github.com/gogf/gf/contrib/registry/nacos/v2.(*Registry).Register
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/contrib/registry/nacos/v2@v2.8.3/nacos_register.go:48
+github.com/gogf/gf/v2/net/ghttp.(*Server).doServiceRegister
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server_registry.go:51
+github.com/gogf/gf/v2/net/ghttp.(*Server).Start
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:266
+github.com/gogf/gf/v2/net/ghttp.(*Server).Run
+	C:/Users/caoxu/go/pkg/mod/github.com/gogf/gf/v2@v2.9.3/net/ghttp/ghttp_server.go:455
+devmgr/internal/cmd.init.func1.2
+	D:/Seiyuan/project_all/cloud_plat/devmgr/internal/cmd/cmd.go:63
+runtime.goexit
+	C:/Program Files/Go/src/runtime/asm_amd64.s:1700
+2025-10-31T16:44:58.812+0800	WARN	config_client/config_client.go:335	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T16:44:58.815+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T16:47:23.644+0800	WARN	config_client/config_client.go:335	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T16:47:23.644+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T16:50:22.530+0800	WARN	config_client/config_client.go:335	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T16:50:22.531+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T16:51:47.303+0800	WARN	config_client/config_client.go:335	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-10-31T16:51:47.303+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-11-01T15:16:22.205+0800	WARN	config_client/config_client.go:335	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\core-rpc@@DEFAULT_GROUP@@public.: file not exist
+2025-11-01T15:16:22.207+0800	WARN	cache/disk_cache.go:155	read cache file Config Encrypted Data Key failed. cause file doesn't exist, file path: tmp/nacos\config\encrypted-data-key\core-rpc@@DEFAULT_GROUP@@public.: file not exist

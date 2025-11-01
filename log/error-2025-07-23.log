@@ -1,0 +1,30 @@
+2025-07-23T14:52:31.721+08:00 [ERRO] {4fdaf0ecd0ce5418d30c0a63eaaf9a55} /user.Devmgr/DevAuth, 31.467ms, 0, "", DeviceKey:"asdasd" DeviceSecret:"1111", <nil>, -1, "", ""
+Stack:
+认证失败
+2025-07-23T14:53:00.650+08:00 [ERRO] {e27732abd7ce5418c5b7ef5030f605dc} /user.Devmgr/DevAuth, 4.414ms, 0, "", DeviceKey:"device_key_1" DeviceSecret:"11device_secret_1", <nil>, -1, "", ""
+Stack:
+认证失败
+2025-07-23T14:53:29.314+08:00 [ERRO] {21815157dece54187edc11708a13ede4} /user.Devmgr/DevAuth, 11.105ms, 0, "", DeviceKey:"device_key_1" DeviceSecret:"device_secret_1", <nil>, -1, "", ""
+Stack:
+认证失败
+2025-07-23T14:56:27.254+08:00 [ERRO] {c4fedcc307cf541880561533f4da01a9} /user.Devmgr/DevAuth, 35.948ms, 0, "", DeviceKey:"device_key_1" DeviceSecret:"device_secret_1", <nil>, -1, "", ""
+Stack:
+认证失败:%!(EXTRA int=3)
+2025-07-23T14:57:23.423+08:00 [ERRO] {f3605bd714cf5418d2523106b2d11a68} /user.Devmgr/DevAuth, 41.774ms, 0, "", DeviceKey:"device_key_1" DeviceSecret:"device_secret_1", <nil>, -1, "", ""
+Stack:
+认证失败3
+2025-07-23T14:58:34.227+08:00 [ERRO] {2a5cb15525cf541862dcbb07faf1b4aa} /user.Devmgr/DevAuth, 11.299ms, 0, "", DeviceKey:"device_key_20" DeviceSecret:"device_secret_20", <nil>, -1, "", ""
+Stack:
+认证失败3
+2025-07-23T15:02:01.125+08:00 [ERRO] {1ce3458055cf54184f8c6d132df51cc0} /user.Devmgr/DevAuth, 34.662ms, 0, "", DeviceKey:"device_key_20" DeviceSecret:"device_secret_20", <nil>, -1, "", ""
+Stack:
+认证失败3
+2025-07-23T15:55:20.697+08:00 [ERRO] {9ac3f5743ed25418cbe55a3a76d838d8} /user.Devmgr/DevAuth, 44.879ms, 52, "SELECT COUNT(1) FROM "product" WHERE device_key = 'device_key_20': pq: column "device_key" does not exist", DeviceKey:"device_key_20"  DeviceSecret:"device_secret_20", <nil>, -1, "", ""
+Stack:
+rpc error: code = Code(52) desc = SELECT COUNT(1) FROM "product" WHERE device_key = 'device_key_20': pq: column "device_key" does not exist
+2025-07-23T15:55:59.447+08:00 [ERRO] {9a5a247b47d2541838ac512937177bdd} /user.Devmgr/DevAuth, 37.097ms, 52, "SELECT COUNT(1) FROM "product" WHERE DeviceKey = 'device_key_20': pq: column "devicekey" does not exist", DeviceKey:"device_key_20"  DeviceSecret:"device_secret_20", <nil>, -1, "", ""
+Stack:
+rpc error: code = Code(52) desc = SELECT COUNT(1) FROM "product" WHERE DeviceKey = 'device_key_20': pq: column "devicekey" does not exist
+2025-07-23T15:56:39.222+08:00 [ERRO] {7e1405be50d25418ec91481d4990ee1a} /user.Devmgr/DevAuth, 34.964ms, 52, "SELECT COUNT(1) FROM "product" WHERE device_key = 'device_key_20': pq: column "device_key" does not exist", DeviceKey:"device_key_20"  DeviceSecret:"device_secret_20", <nil>, -1, "", ""
+Stack:
+rpc error: code = Code(52) desc = SELECT COUNT(1) FROM "product" WHERE device_key = 'device_key_20': pq: column "device_key" does not exist
